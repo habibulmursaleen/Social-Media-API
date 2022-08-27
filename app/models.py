@@ -1,7 +1,7 @@
 import email
 from email.mime import base
 from email.policy import default
-from tkinter import CASCADE
+from tkinter import CASCADE, _tkinter
 from xmlrpc.client import boolean
 from markupsafe import string
 from sqlalchemy import TIMESTAMP, Column, ForeignKey, Integer,String,Boolean
