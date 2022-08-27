@@ -1,8 +1,6 @@
 import email
 from email.mime import base
 from email.policy import default
-import tkinter
-import _tkinter
 from tkinter import CASCADE
 from xmlrpc.client import boolean
 from markupsafe import string
