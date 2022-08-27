@@ -32,8 +32,8 @@ class Post(PostBase):
         orm_mode = True
         
 class PostOut(PostBase):
-    Post: Post
     votes: int 
+    post: Post
 
     class Config:   #Pydantic's orm_mode will tell the Pydantic model to read the data even if it is not a dict, but an ORM model
         orm_mode = True

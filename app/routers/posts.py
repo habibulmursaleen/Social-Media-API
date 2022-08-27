@@ -44,7 +44,7 @@ def create_posts(post: schemas.PostCreate, db: Session = Depends(get_db), curren
 #All Post Retrive 
 # @router.get("/", response_model= List[schemas.Post])
 # @router.get("/", response_model= List[schemas.PostOut])
-@router.get("/")
+@router.get("/", response_model= List[schemas.PostOut])
 def get_post(db: Session = Depends(get_db), current_user: int= Depends(oauth2.get_current_user), limit: int = 20, skip: int = 0, search : Optional[str]= ""): #limit: int = 10 so that user can choose how many posts s/he wants to see
     
     #cur.execute("""SELECT * FROM posts """)
