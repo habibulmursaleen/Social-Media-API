@@ -74,7 +74,7 @@ def get_post(db: Session = Depends(get_db), current_user: int= Depends(oauth2.ge
 #     return posts
 
 #Single Post Retrive
-@router.get("/{id}", response_model= schemas.PostOut)
+@router.get("/{id}")
 def get_one_post(id: int, db: Session = Depends(get_db), current_user: int= Depends(oauth2.get_current_user)):
     # cur.execute("""SELECT * FROM posts WHERE id = %s """, (str(id))) # this is to avoid SQL injection
     # post = cur.fetchone() 
