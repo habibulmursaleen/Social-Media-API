@@ -9,7 +9,7 @@ from .config import settings
 
 #SQLALCHEMY_DATABASE_URL = "postgresql://username:password@postgresserver_ipaddress/db"
 #SQLALCHEMY_DATABASE_URL = f'postgresql://postgres:password@localhost:5432/FastAPI'
-#SQLALCHEMY_DATABASE_URL = f'postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}'
+SQLALCHEMY_DATABASE_URL = f'postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}'
 
 #responsible to SQLALchamy with Postgres DB 
 engine = create_engine(SQLALCHEMY_DATABASE_URL) #for SQLlite this needs to add ", connect_args={"check_same_thread": False}"
